@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My developer | Sites para profissionais de Salto e região</title>
+<meta name="description" content="Sites de uma página, feitos sob medida para profissionais de saúde e negócios de Salto, Itu e região. A página chega pronta antes de você pagar.">
+<meta name="theme-color" content="#121315">
+<link rel="canonical" href="https://my-developer.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="My developer | Seu site pronto antes da contratação">
+<meta property="og:description" content="Sites de uma página, sob medida, para profissionais de Salto, Itu e região. Conheça os projetos.">
+<meta property="og:url" content="https://my-developer.vercel.app/">
+<meta property="og:image" content="https://my-developer.vercel.app/img/og.jpg?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/png" href="img/favicon.png?v=1">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#121315; --tinta-2:#1B1D20; --tinta-3:#26292D;
+  --papel:#F1F1EE; --branco:#FBFBF9; --cinza:#5A5D62; --cinza-claro:#A3A7AD;
+  --ambar:#F2B33D; --ambar-tinta:#8A5A06;
+  --linha-c:rgba(251,251,249,.12); --linha-e:rgba(18,19,21,.12);
+  --disp:'Bricolage Grotesque',system-ui,sans-serif; --sans:'Instrument Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1); --gut:clamp(20px,5vw,72px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip;-webkit-tap-highlight-color:transparent}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,figure,ol,ul{margin:0}
+ol,ul{padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--ambar);outline-offset:3px;border-radius:3px}
+.wrap{width:100%;max-width:1280px;margin:0 auto;padding:0 var(--gut)}
+.ico{width:20px;height:20px;flex:none}
+
+/* Topo */
+.topo{position:fixed;inset:0 0 auto;z-index:50;color:var(--branco);transition:background-color .3s,color .3s,box-shadow .3s}
+.topo .wrap{display:flex;align-items:center;gap:24px;height:72px}
+.marca{font-family:var(--disp);font-weight:800;font-size:1.35rem;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:baseline;gap:0;white-space:nowrap}
+.marca i{font-style:normal;color:var(--ambar)}
+.marca small{font-family:var(--sans);font-weight:500;font-size:.8rem;letter-spacing:0;opacity:.7}
+.topo nav{margin-left:auto;display:flex;gap:26px}
+.topo nav a{font-size:.92rem;font-weight:500;text-decoration:none;opacity:.85;padding:10px 0}
+.topo nav a:hover{opacity:1}
+.topo.rolou{background:rgba(18,19,21,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--linha-c)}
+.topo.rolou.claro{background:rgba(241,241,238,.9);color:var(--tinta);box-shadow:0 1px 0 var(--linha-e)}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:13px 24px;border-radius:999px;background:var(--ambar);color:var(--tinta);font-weight:700;font-size:1rem;text-decoration:none;white-space:nowrap;transition:transform .2s var(--ease),box-shadow .25s,background-color .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(242,179,61,.7);background:#F6C25E}
+.btn:active{transform:scale(.97)}
+.btn-sec{display:inline-flex;align-items:center;gap:8px;min-height:50px;padding:13px 4px;font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}
+.btn-sec svg{width:18px;height:18px;transition:transform .3s var(--ease)}
+.btn-sec:hover svg{transform:translateY(3px)}
+
+/* Abertura */
+.abertura{position:relative;min-height:100svh;background:var(--tinta);color:var(--branco);overflow:hidden;display:flex;align-items:center;padding:110px 0 72px}
+.abertura .wrap{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:48px;align-items:center}
+.selo{display:inline-flex;align-items:center;gap:10px;font-size:.88rem;font-weight:500;color:var(--cinza-claro);padding:7px 14px 7px 10px;border:1px solid var(--linha-c);border-radius:999px}
+.selo i{width:8px;height:8px;border-radius:50%;background:var(--ambar);box-shadow:0 0 0 4px rgba(242,179,61,.18)}
+.abertura h1{font-family:var(--disp);font-weight:800;letter-spacing:-.035em;line-height:.95;font-size:clamp(2.9rem,5.2vw,5.1rem);margin-top:0}
+.abertura h1 .l{display:block;overflow:hidden;padding-bottom:.06em}
+.abertura h1 .l>span{display:block}
+.abertura h1 mark{background:none;color:var(--ambar)}
+.sub{font-size:clamp(1.05rem,1.35vw,1.2rem);color:var(--cinza-claro);max-width:46ch;margin-top:24px}
+.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;margin-top:34px}
+.numeros{display:flex;flex-wrap:wrap;gap:14px 40px;margin-top:44px;padding-top:24px;border-top:1px solid var(--linha-c)}
+.numeros div{display:flex;flex-direction:column}
+.numeros b{font-family:var(--disp);font-weight:800;font-size:2.1rem;line-height:1;letter-spacing:-.02em}
+.numeros span{font-size:.84rem;color:var(--cinza-claro);margin-top:6px}
+/* Parede de telas */
+.parede{position:relative;height:calc(100svh - 150px);min-height:560px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;transform:rotate(-7deg) scale(1.08);-webkit-mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent)}
+.coluna{display:flex;flex-direction:column;gap:16px;animation:subir 46s linear infinite}
+.coluna:nth-child(2){animation-direction:reverse;animation-duration:54s;margin-top:-120px}
+.coluna:nth-child(3){animation-duration:50s;margin-top:-60px}
+@keyframes subir{to{transform:translateY(-50%)}}
+.tel{border-radius:22px;overflow:hidden;border:5px solid #2A2D31;background:var(--tinta-2);box-shadow:0 24px 40px -20px rgba(0,0,0,.7);aspect-ratio:390/844;flex:none}
+.tel img{width:100%;height:100%;object-fit:cover;object-position:top}
+.abertura::after{content:"";position:absolute;inset:auto 0 0;height:120px;background:linear-gradient(transparent,var(--tinta));z-index:1;pointer-events:none}
+
+/* Entrada */
+.js .abertura h1 .l>span{transform:translateY(105%)}
+.js .selo,.js .sub,.js .acoes,.js .numeros{opacity:0;transform:translateY(14px)}
+.js .parede{opacity:0}
+.carregou .abertura h1 .l>span{transform:none;transition:transform .9s var(--ease)}
+.carregou .abertura h1 .l:nth-child(2)>span{transition-delay:.08s}
+.carregou .abertura h1 .l:nth-child(3)>span{transition-delay:.16s}
+.carregou .selo{opacity:1;transform:none;transition:opacity .6s,transform .7s var(--ease)}
+.carregou .sub{opacity:1;transform:none;transition:opacity .6s .35s,transform .7s var(--ease) .35s}
+.carregou .acoes{opacity:1;transform:none;transition:opacity .6s .45s,transform .7s var(--ease) .45s}
+.carregou .numeros{opacity:1;transform:none;transition:opacity .6s .55s,transform .7s var(--ease) .55s}
+.carregou .parede{opacity:1;transition:opacity 1.2s .2s}
+
+/* Seções */
+.secao{padding:clamp(80px,10vw,132px) 0}
+.titulo{font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-height:1;font-size:clamp(2.4rem,5vw,4.2rem);text-wrap:balance}
+.lead{font-size:clamp(1.02rem,1.25vw,1.15rem);color:var(--cinza);max-width:56ch;margin-top:16px;text-wrap:pretty}
+.cabeca{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 56px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.cabeca .lead{margin-top:0}
+
+/* Trabalhos */
+.trabalhos{background:var(--papel)}
+.grade{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,3vw,44px) clamp(20px,2.4vw,32px)}
+.caso{position:relative;display:flex;flex-direction:column}
+.caso.destaque{grid-column:1/-1}
+.vitrine{position:relative;padding:0 0 26px 0}
+.janela{position:relative;border-radius:12px;overflow:hidden;background:var(--tinta-2);box-shadow:0 1px 0 var(--linha-e),0 30px 50px -30px rgba(18,19,21,.45);margin-right:16%}
+.barra-jan{display:flex;align-items:center;gap:7px;height:34px;padding:0 14px;background:#E3E3DF;border-bottom:1px solid var(--linha-e)}
+.barra-jan i{width:10px;height:10px;border-radius:50%;background:#C9C9C4}
+.barra-jan span{margin-left:12px;flex:1;max-width:340px;font-size:.74rem;color:var(--cinza);background:var(--branco);border-radius:6px;padding:3px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tela{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--tinta-3)}
+.tela img{width:100%;height:auto;transform:translateY(0);transition:transform 7s cubic-bezier(.45,0,.3,1)}
+.caso:hover .tela img,.caso.rolando .tela img{transform:translateY(calc(-100% + var(--alt,300px)))}
+.caso .celular{position:absolute;right:0;bottom:0;width:24%;min-width:110px;border-radius:20px;overflow:hidden;border:5px solid var(--tinta);background:var(--tinta);box-shadow:0 26px 40px -20px rgba(18,19,21,.6);aspect-ratio:390/844;transition:transform .5s var(--ease)}
+.caso .celular img{width:100%;height:100%;object-fit:cover;object-position:top}
+.caso:hover .celular{transform:translateY(-8px) rotate(-2deg)}
+.info{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;align-items:start;margin-top:18px}
+.info .tag{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
+.tag span{font-size:.76rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--branco);border:1px solid var(--linha-e);color:var(--cinza)}
+.tag span.forte{background:var(--tinta);color:var(--branco);border-color:var(--tinta)}
+.info h3{font-family:var(--disp);font-weight:800;font-size:clamp(1.5rem,2.2vw,1.9rem);letter-spacing:-.02em;line-height:1.05;margin-top:6px}
+.info .esp{font-size:.92rem;color:var(--cinza)}
+.info p.desc{grid-column:1/-1;color:var(--tinta);max-width:60ch;margin-top:4px}
+.ao-vivo{grid-row:2/4;grid-column:2;align-self:center;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;text-decoration:none;padding:10px 16px;border-radius:999px;border:1.5px solid var(--tinta);white-space:nowrap;transition:background-color .2s,color .2s}
+.ao-vivo:hover{background:var(--tinta);color:var(--branco)}
+.ao-vivo svg{width:15px;height:15px}
+.em-breve{grid-row:2/4;grid-column:2;align-self:center;font-size:.8rem;color:var(--cinza);white-space:nowrap}
+.caso.destaque .vitrine{display:grid}
+.caso.destaque .janela{margin-right:20%}
+.caso.destaque .celular{width:19%}
+
+/* Como funciona */
+.como{background:var(--tinta);color:var(--branco)}
+.como .lead{color:var(--cinza-claro)}
+.passos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:p}
+.passo{position:relative;padding:30px 28px 32px;border-radius:16px;background:var(--tinta-2);border:1px solid var(--linha-c)}
+.passo .n{font-family:var(--disp);font-weight:800;font-size:3.6rem;line-height:.9;color:var(--ambar);letter-spacing:-.04em}
+.passo h3{font-family:var(--disp);font-weight:700;font-size:1.45rem;line-height:1.15;margin-top:18px;letter-spacing:-.01em}
+.passo p{color:var(--cinza-claro);margin-top:10px;font-size:.98rem}
+.passo:nth-child(2){transform:translateY(28px)}
+.passo:nth-child(3){transform:translateY(56px)}
+.passos-fim{margin-top:96px;display:flex;flex-wrap:wrap;gap:12px}
+.passos-fim span{font-size:.9rem;padding:9px 16px;border-radius:999px;border:1px solid var(--linha-c);color:var(--cinza-claro)}
+.passos-fim b{color:var(--branco);font-weight:600}
+
+/* Todo site tem */
+.inclui{background:var(--papel)}
+.lista{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--linha-e)}
+.lista li{padding:26px 26px 30px 0;border-bottom:1px solid var(--linha-e)}
+.lista li:not(:nth-child(3n)){border-right:1px solid var(--linha-e);margin-right:0}
+.lista li:not(:nth-child(3n+1)){padding-left:26px}
+.lista svg{width:28px;height:28px;color:var(--ambar-tinta)}
+.lista h3{font-family:var(--disp);font-weight:700;font-size:1.25rem;margin-top:14px;letter-spacing:-.01em}
+.lista p{color:var(--cinza);margin-top:6px;font-size:.96rem}
+
+/* Final */
+.final{background:var(--tinta);color:var(--branco);text-align:center;overflow:hidden;position:relative}
+.final .titulo{font-size:clamp(2.8rem,6.6vw,5.6rem);max-width:15ch;margin:0 auto}
+.final .titulo mark{background:none;color:var(--ambar)}
+.final .lead{color:var(--cinza-claro);margin:20px auto 0}
+.final .acoes{justify-content:center}
+.final .btn{min-height:58px;padding:16px 30px;font-size:1.06rem}
+.assina{margin-top:30px;font-size:.9rem;color:var(--cinza-claro)}
+.rodape{background:var(--tinta);color:var(--cinza-claro);font-size:.84rem;border-top:1px solid var(--linha-c);padding:24px 0 calc(24px + env(safe-area-inset-bottom))}
+.rodape .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* Revelação */
+.js .rev{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .9s var(--ease)}
+.js .rev.visto{opacity:1;transform:none}
+.js .passo.rev.visto:nth-child(2){transform:translateY(28px)}
+.js .passo.rev.visto:nth-child(3){transform:translateY(56px)}
+.rev-d1{transition-delay:.08s!important}.rev-d2{transition-delay:.16s!important}
+
+@media (max-width:1000px){
+  .topo nav{display:none}
+  .topo .btn{margin-left:auto}
+  .abertura{padding-top:96px;min-height:0}
+  .abertura .wrap{grid-template-columns:minmax(0,1fr)}
+  .parede{height:420px;min-height:0;transform:rotate(-6deg) scale(1.04);margin:0 calc(var(--gut) * -1)}
+  .cabeca{grid-template-columns:minmax(0,1fr)}
+  .grade{grid-template-columns:minmax(0,1fr)}
+  .passos{grid-template-columns:minmax(0,1fr)}
+  .passo:nth-child(2),.passo:nth-child(3),.js .passo.rev.visto:nth-child(2),.js .passo.rev.visto:nth-child(3){transform:none}
+  .passos-fim{margin-top:40px}
+  .lista{grid-template-columns:minmax(0,1fr)}
+  .lista li,.lista li:not(:nth-child(3n+1)){padding:22px 0;border-right:0!important}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .numeros{gap:14px 26px}
+  .numeros b{font-size:1.7rem}
+  .janela,.caso.destaque .janela{margin-right:20%}
+  .caso .celular,.caso.destaque .celular{width:30%;min-width:0;border-width:4px;border-radius:16px}
+  .info{grid-template-columns:minmax(0,1fr)}
+  .ao-vivo,.em-breve{grid-row:auto;grid-column:1;justify-self:start;margin-top:8px}
+  .barra-jan span{display:none}
+  .acoes .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .caso:hover .tela img,.caso.rolando .tela img{transform:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.39 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-fora" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M8 16 16 8M9 8h7v7"/></symbol>
+  <symbol id="i-cel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></g></symbol>
+  <symbol id="i-estrela" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M12 3.2l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 17l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-globo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></g></symbol>
+  <symbol id="i-raio" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M13 2.5 5 13.5h6l-1 8 8-11h-6z"/></symbol>
+</svg>
+
+<header class="topo" id="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="My developer, início">My developer<i>.</i></a>
+    <nav aria-label="Seções"><a href="#trabalhos">Projetos</a><a href="#como">Como funciona</a><a href="#inclui">O que inclui</a></nav>
+    <a class="btn" data-wa="Olá, Theo! Conheci o seu portfólio e gostaria de conversar sobre um site para o meu negócio." style="min-height:42px;padding:9px 18px;font-size:.92rem"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Agendar conversa</a>
+  </div>
+</header>
+
+<main>
+  <section class="abertura" id="inicio">
+    <div class="wrap">
+      <div>
+        <h1><span class="l"><span>Seu site <mark>pronto</mark></span></span><span class="l"><span>antes da</span></span><span class="l"><span>contratação.</span></span></h1>
+        <p class="sub">Analiso o seu Instagram, as avaliações no Google e a forma como você atende, desenvolvo a página completa e envio o link para a sua avaliação. Você vê o resultado funcionando no celular antes de qualquer compromisso.</p>
+        <div class="acoes">
+          <a class="btn" href="#trabalhos">Conhecer os projetos<svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a>
+          <a class="btn-sec" data-wa="Olá, Theo! Conheci o seu portfólio e gostaria de conversar sobre um site para o meu negócio."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Falar pelo WhatsApp</a>
+        </div>
+        <div class="numeros">
+          <div><b>10</b><span>sites desenvolvidos</span></div>
+          <div><b>R$ 0</b><span>de hospedagem mensal</span></div>
+          <div><b>Até 3 dias</b><span>para publicação após os ajustes</span></div>
+        </div>
+      </div>
+      <div class="parede" aria-hidden="true">
+        <div class="coluna" data-telas="pedro-salvadori,carolina-mendes,tatiane-telli,francieli-dantas"></div>
+        <div class="coluna" data-telas="isadora-magnaboschi,wlamar-alves,ana-lazuroz,paulo-melo"></div>
+        <div class="coluna" data-telas="talita-oka,ana-carolina-ribeiro,pedro-salvadori,isadora-magnaboschi"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trabalhos secao" id="trabalhos" aria-labelledby="tr-titulo">
+    <div class="wrap">
+      <div class="cabeca rev">
+        <h2 class="titulo" id="tr-titulo">Projetos desenvolvidos sob medida</h2>
+        <p class="lead">Cada página parte de um conceito próprio, criado a partir da rotina do profissional, como o clube de futebol, o box de CrossFit ou a corrida de rua. Passe o cursor sobre um projeto (no celular, basta rolar a página) para visualizá-lo por completo.</p>
+      </div>
+      <div class="grade" id="grade"></div>
+    </div>
+  </section>
+
+  <section class="como secao" id="como" aria-labelledby="como-titulo">
+    <div class="wrap">
+      <div class="cabeca rev">
+        <h2 class="titulo" id="como-titulo">Como funciona o processo</h2>
+        <p class="lead">A conversa sobre investimento acontece depois que você já navegou pelo seu site pronto.</p>
+      </div>
+      <ol class="passos">
+        <li class="passo rev"><span class="n">1</span><h3>Pesquisa do seu negócio</h3><p>Levanto as informações do seu Instagram, do Google e das avaliações dos seus clientes, além de fotos e horários. Todo o conteúdo é real e vem do seu próprio negócio.</p></li>
+        <li class="passo rev rev-d1"><span class="n">2</span><h3>Desenvolvimento e envio do link</h3><p>Crio um conceito exclusivo com a sua identidade visual, animações e navegação pensada para o celular. Todos os botões direcionam para o seu WhatsApp.</p></li>
+        <li class="passo rev rev-d2"><span class="n">3</span><h3>Ajustes e publicação</h3><p>Você solicita as alterações de fotos, textos e serviços. Após os ajustes, publico o site em até 3 dias, com o domínio registrado no seu nome.</p></li>
+      </ol>
+      <div class="passos-fim rev"><span><b>Domínio</b> registrado no seu nome</span><span><b>Hospedagem</b> sem mensalidade</span><span><b>Manutenção</b> mensal opcional</span></div>
+    </div>
+  </section>
+
+  <section class="inclui secao" id="inclui" aria-labelledby="inc-titulo">
+    <div class="wrap">
+      <div class="cabeca rev">
+        <h2 class="titulo" id="inc-titulo">O que todo site inclui</h2>
+        <p class="lead">A estrutura é a mesma em todos os projetos, e a identidade visual é própria de cada cliente.</p>
+      </div>
+      <ul class="lista rev">
+        <li><svg aria-hidden="true"><use href="#i-wa"/></svg><h3>Agendamento pelo WhatsApp</h3><p>Cada botão abre uma conversa com a mensagem já preenchida, o que facilita o primeiro contato.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-estrela"/></svg><h3>Avaliações do Google</h3><p>Os depoimentos reais dos seus clientes, com a nota e o total de avaliações.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-pin"/></svg><h3>Endereço, horários e mapa</h3><p>Com a indicação automática de "aberto agora", de acordo com o horário de Brasília.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-cel"/></svg><h3>Otimizado para celular</h3><p>Testado em celular e em computador antes da entrega.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-raio"/></svg><h3>Interação personalizada</h3><p>Um recurso pensado para o seu trabalho, como a escolha de treino do Pedro ou a lousa da Isa.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-globo"/></svg><h3>Preparado para Google e Instagram</h3><p>Título, descrição e imagem de compartilhamento configurados, além de um link pronto para a bio.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="final secao" id="contato" aria-labelledby="fim-titulo">
+    <div class="wrap rev">
+      <h2 class="titulo" id="fim-titulo">Quer conhecer o <mark>seu</mark> site pronto?</h2>
+      <p class="lead">Envie o seu Instagram ou o nome do seu negócio no Google. Eu desenvolvo a página e envio o link para a sua avaliação, sem compromisso.</p>
+      <div class="acoes"><a class="btn" data-wa="Olá, Theo! Conheci o seu portfólio e gostaria de ver o meu site pronto."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Falar com o Theo pelo WhatsApp</a></div>
+      <p class="assina">Theo Teixeira, desenvolvedor de sites em Salto, SP</p>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape"><div class="wrap"><span>© 2026 My developer. Sites de uma página para negócios locais.</span><span>Salto, Itu e região</span></div></footer>
+
+<script>
+(function(){
+  var numero = '5511964392079';
+  document.querySelectorAll('[data-wa]').forEach(function(el){
+    el.href = 'https://wa.me/' + numero + '?text=' + encodeURIComponent(el.getAttribute('data-wa'));
+    el.target = '_blank'; el.rel = 'noopener';
+  });
+
+  var CASOS = [
+    {id:'pedro-salvadori', nome:'Pedro Salvadori', esp:'Nutricionista esportivo', tipo:'Criado do zero', url:'https://pedro-salvadori.vercel.app/', destaque:true,
+     desc:'Nutricionista do Sub-20 do Desportivo Brasil. O logo do consultório acende como um letreiro neon, a página apresenta um dia de jogo no clube e o paciente escolhe o seu tipo de treino para ver como o plano é montado.'},
+    {id:'isadora-magnaboschi', nome:'Isadora Magnaboschi', esp:'Nutricionista esportiva', tipo:'Criado do zero', url:'sites/isadora-magnaboschi/index.html',
+     desc:'Inspirado no CrossFit, que ela pratica: a página tem a estética de uma lousa de box, e a paciente escolhe um alimento do dia a dia para ver como a dieta é negociada.'},
+    {id:'carolina-mendes', nome:'Carolina Mendes', esp:'Nutricionista da mulher na menopausa', tipo:'Reformulação de site', url:'https://nutri-carolinamendes.vercel.app/',
+     desc:'Um botão alterna entre "estratégia antiga" e "nova estratégia" com uma transição líquida que se espalha pela tela.'},
+    {id:'tatiane-telli', nome:'Tatiane Telli', esp:'Nutricionista', tipo:'Criado do zero', url:'https://tatiane-telli.vercel.app/',
+     desc:'Conceito inspirado nos bilhetes da identidade dela, com recados presos por prendedores e o logo redesenhado a partir do original.'},
+    {id:'ana-lazuroz', nome:'Ana Lazuroz', esp:'Nutricionista para mulheres 35+', tipo:'Criado do zero', url:'https://ana-lazuroz.vercel.app/',
+     desc:'Corredora de rua, ela fala em "rotina corrida". A página usa a pista de atletismo como elemento visual.'},
+    {id:'wlamar-alves', nome:'Wlamar Alves', esp:'Nutricionista integrativa', tipo:'Criado do zero', url:'https://wlamar-alves.vercel.app/', destaque:true,
+     desc:'Paleta em tons pastel e marrom, tipografia de leitura confortável e abertura em tela cheia com a foto da profissional.'},
+    {id:'ana-carolina-ribeiro', nome:'Ana Carolina Ribeiro', esp:'Nutricionista', tipo:'Reformulação de site', url:'https://nutri-anaribeiro.vercel.app/',
+     desc:'O verde-floresta do logo, um título que surge palavra por palavra e os serviços apresentados em painéis expansíveis.'},
+    {id:'francieli-dantas', nome:'Francieli Dantas', esp:'Nutricionista', tipo:'Criado do zero', url:'https://nutri-frandantas.vercel.app/',
+     desc:'O nome surge "costurado" em letra dourada, em referência ao bordado da jaqueta dela, e uma seção apresenta o reality do qual ela participou.'},
+    {id:'talita-oka', nome:'Talita Oka', esp:'Nutricionista esportiva e da saúde da mulher', tipo:'Reformulação de site', url:'sites/talita-oka/index.html',
+     desc:'O relógio do ciclo de 21 dias, programa da profissional, avança conforme a página é rolada.'},
+    {id:'paulo-melo', nome:'Paulo Melo', esp:'Nutricionista', tipo:'Criado do zero', url:'https://paulo-nutri.vercel.app/',
+     desc:'A frase "Você não é indisciplinado. Você é humano." abre uma página clara, que destaca os números do perfil.'}
+  ];
+  function dominio(u){ return u.replace('https://','').replace('index.html','').replace(/\/$/,''); }
+  var grade = document.getElementById('grade');
+  grade.innerHTML = CASOS.map(function(c, i){
+    var link = c.url ? '<a class="ao-vivo" href="' + c.url + '" target="_blank" rel="noopener">Acessar o site<svg aria-hidden="true"><use href="#i-fora"/></svg></a>' : '<span class="em-breve">Publicação em breve</span>';
+    return '<article class="caso rev' + (c.destaque ? ' destaque' : '') + (i % 2 && !c.destaque ? ' rev-d1' : '') + '">' +
+      '<div class="vitrine"><div class="janela"><div class="barra-jan" aria-hidden="true"><i></i><i></i><i></i><span>' + (c.url ? dominio(c.url) : c.id + '.vercel.app') + '</span></div>' +
+      '<div class="tela"><img src="img/' + c.id + '-d.jpg?v=1" alt="Página de ' + c.nome + ' no computador" width="900" height="1687" loading="lazy"></div></div>' +
+      '<figure class="celular"><img src="img/' + c.id + '-m.jpg?v=1" alt="Página de ' + c.nome + ' no celular" width="520" height="1125" loading="lazy"></figure></div>' +
+      '<div class="info"><div class="tag"><span class="forte">' + c.tipo + '</span><span>Salto, SP</span></div><div><h3>' + c.nome + '</h3><span class="esp">' + c.esp + '</span></div>' + link + '<p class="desc">' + c.desc + '</p></div></article>';
+  }).join('');
+
+  // Parede de telas da abertura (cada coluna duplicada para o loop)
+  document.querySelectorAll('.coluna').forEach(function(col){
+    var h = col.dataset.telas.split(',').map(function(id){ return '<div class="tel"><img src="img/' + id + '-m.jpg?v=1" alt="" width="520" height="1125"></div>'; }).join('');
+    col.innerHTML = h + h;
+  });
+
+  // A tela desce até o fim da imagem
+  function medir(){ document.querySelectorAll('.tela').forEach(function(t){ t.parentNode.parentNode.parentNode.style.setProperty('--alt', t.clientHeight + 'px'); }); }
+  addEventListener('resize', medir); addEventListener('load', medir); medir();
+
+  var toque = matchMedia('(hover: none)').matches;
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (e.target.classList.contains('rev') && e.isIntersecting) e.target.classList.add('visto');
+      if (toque && e.target.classList.contains('caso')) e.target.classList.toggle('rolando', e.isIntersecting && e.intersectionRatio > .55);
+    });
+  }, {threshold:[.2,.55,.8]});
+  document.querySelectorAll('.rev').forEach(function(el){ io.observe(el); });
+
+  var topo = document.getElementById('topo'), claras = ['trabalhos','inclui'].map(function(id){ return document.getElementById(id); });
+  function corTopo(){
+    topo.classList.toggle('rolou', scrollY > 10);
+    topo.classList.toggle('claro', claras.some(function(s){ var r = s.getBoundingClientRect(); return r.top <= 36 && r.bottom > 36; }));
+  }
+  addEventListener('scroll', corTopo, {passive:true}); corTopo();
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ document.documentElement.classList.add('carregou'); }); });
+})();
+</script>
+</body>
+</html>
